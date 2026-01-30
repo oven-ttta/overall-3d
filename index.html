@@ -3,16 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>3D Printer Control Panel</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+        // Force links to work correctly
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[data-printer-link]').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    window.open(this.href, '_blank');
+                });
+            });
+        });
+    </script>
 </head>
-<body>
-    <div class="flex flex-col text-2xl items-center space-y-4 p-10 justify-center">
-        <a href="https://elegoo-printer-1.facemenow.co" class="border bg-blue-500 p-4 hover:bg-blue-300 rounded-xl" target="_blank">elegoo-1</a>
-        <a href="https://elegoo-printer-2.facemenow.co" class="border bg-blue-500 p-4 hover:bg-blue-300 rounded-xl" target="_blank">elegoo-2</a>
-        <a href="https://elegoo-printer-3.facemenow.co" class="border bg-blue-500 p-4 hover:bg-blue-300 rounded-xl" target="_blank">elegoo-3</a>
-        <a href="https://bambu.facemenow.co" class="border bg-blue-500 p-4 hover:bg-blue-300 rounded-xl" target="_blank">bambu-1</a>
-        <a href="https://piocreate.facemenow.co" class="border bg-blue-500 p-4 hover:bg-blue-300 rounded-xl" target="_blank">piocreate-1</a>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 min-h-screen">
+    <div class="container mx-auto px-6 py-10">
+
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-white mb-3 tracking-tight">3D Printer Dashboard</h1>
+            <p class="text-gray-400 text-lg">เลือกเครื่องพิมพ์ที่ต้องการเข้าใช้งาน</p>
+        </div>
+
+        <!-- Printer Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+            <!-- Elegoo Orange Storm Giga 1 -->
+            <a href="https://elegoo-printer-1.facemenow.co" target="_blank" data-printer-link
+               class="group block bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-2 border border-gray-700 hover:border-orange-500">
+                <div class="relative h-48 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center overflow-hidden">
+                    <img src="giga.png" alt="Elegoo Giga" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="p-5">
+                    <h3 class="text-xl font-bold text-white mb-2">Elegoo Orange Storm Giga</h3>
+                    <p class="text-orange-400 text-sm font-semibold mb-3">เครื่องที่ 1</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-400 text-sm">คลิกเพื่อเข้าสู่ระบบ</span>
+                        <span class="text-orange-400 group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Elegoo Orange Storm Giga 2 -->
+            <a href="https://elegoo-printer-2.facemenow.co" target="_blank" data-printer-link
+               class="group block bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-orange-500/30 transition-all duration-300 hover:-translate-y-2 border border-gray-700 hover:border-orange-500">
+                <div class="relative h-48 bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center overflow-hidden">
+                    <img src="giga.png" alt="Elegoo Giga" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="p-5">
+                    <h3 class="text-xl font-bold text-white mb-2">Elegoo Orange Storm Giga</h3>
+                    <p class="text-orange-400 text-sm font-semibold mb-3">เครื่องที่ 2</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-400 text-sm">คลิกเพื่อเข้าสู่ระบบ</span>
+                        <span class="text-orange-400 group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Elegoo Centauri Carbon -->
+            <a href="https://elegoo-printer-3.facemenow.co" target="_blank" data-printer-link
+               class="group block bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-purple-500/30 transition-all duration-300 hover:-translate-y-2 border border-gray-700 hover:border-purple-500">
+                <div class="relative h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center overflow-hidden">
+                    <img src="centauri.png" alt="Elegoo Centauri" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="p-5">
+                    <h3 class="text-xl font-bold text-white mb-2">Elegoo Centauri Carbon</h3>
+                    <p class="text-purple-400 text-sm font-semibold mb-3">Resin Printer</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-400 text-sm">คลิกเพื่อเข้าสู่ระบบ</span>
+                        <span class="text-purple-400 group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Bambu Lab -->
+            <a href="https://bambu.facemenow.co" target="_blank" data-printer-link
+               class="group block bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-green-500/30 transition-all duration-300 hover:-translate-y-2 border border-gray-700 hover:border-green-500">
+                <div class="relative h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center">
+                    <div class="text-8xl">🔧</div>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-xl font-bold text-white mb-2">Bambu Lab</h3>
+                    <p class="text-green-400 text-sm font-semibold mb-3">เครื่องที่ 1</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-400 text-sm">คลิกเพื่อเข้าสู่ระบบ</span>
+                        <span class="text-green-400 group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PioCreate -->
+            <a href="https://piocreate.facemenow.co" target="_blank" data-printer-link
+               class="group block bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-2 border border-gray-700 hover:border-blue-500">
+                <div class="relative h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                    <div class="text-8xl">⚙️</div>
+                </div>
+                <div class="p-5">
+                    <h3 class="text-xl font-bold text-white mb-2">PioCreate</h3>
+                    <p class="text-blue-400 text-sm font-semibold mb-3">เครื่องที่ 1</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-gray-400 text-sm">คลิกเพื่อเข้าสู่ระบบ</span>
+                        <span class="text-blue-400 group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Footer Info -->
+        <div class="text-center mt-12 text-gray-500">
+            <p class="text-sm">คลิกที่การ์ดเพื่อเข้าสู่หน้าควบคุมเครื่องพิมพ์แต่ละเครื่อง</p>
+        </div>
+
     </div>
 </body>
 </html>
