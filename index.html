@@ -8,13 +8,23 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-        body { font-family: 'Noto Sans Thai', 'Space Grotesk', sans-serif; }
-        .card-glow:hover { box-shadow: 0 0 40px rgba(255, 255, 255, 0.1); }
+
+        body {
+            font-family: 'Noto Sans Thai', 'Space Grotesk', sans-serif;
+        }
+
+        .card-glow:hover {
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+        }
+
         .printer-image {
             filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
             transition: transform 0.3s ease;
         }
-        .group:hover .printer-image { transform: scale(1.08); }
+
+        .group:hover .printer-image {
+            transform: scale(1.08);
+        }
     </style>
 </head>
 
@@ -23,9 +33,9 @@
 
         <!-- Header -->
         <div class="text-center mb-16">
-            <div class="inline-flex items-center gap-2 bg-gray-800/50 px-4 py-2 rounded-full mb-6">
-                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                <span class="text-gray-400 text-sm">ระบบพร้อมใช้งาน 2 of 5</span>
+            <div class="inline-flex items-center gap-3 bg-gray-800/50 px-5 py-2.5 rounded-full mb-6 border border-gray-700">
+                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span class="text-gray-400 text-sm font-medium">ออนไลน์ 2 จาก 5 เครื่อง</span>
             </div>
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">3D Printer Dashboard</h1>
             <p class="text-gray-500 text-lg">เลือกเครื่องพิมพ์ที่ต้องการเข้าใช้งาน</p>
@@ -41,12 +51,16 @@
                     <img src="/image/giga.png" alt="Elegoo Giga" class="printer-image max-h-full object-contain">
                 </div>
                 <div class="p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <span class="text-green-400 text-xs font-medium">พร้อมใช้งาน</span>
+                    </div>
                     <div class="flex items-start justify-between mb-3">
                         <div>
                             <h3 class="text-lg font-semibold text-white">Elegoo Orange Storm Giga</h3>
                             <p class="text-orange-400 text-sm font-medium mt-1">เครื่องที่ 1</p>
                         </div>
-                       
+
                     </div>
                     <div class="flex items-center justify-between pt-4 border-t border-gray-800">
                         <span class="text-gray-500 text-sm">เข้าสู่ระบบควบคุม</span>
@@ -62,12 +76,16 @@
                     <img src="/image/giga.png" alt="Elegoo Giga" class="printer-image max-h-full object-contain">
                 </div>
                 <div class="p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <span class="text-green-400 text-xs font-medium">พร้อมใช้งาน</span>
+                    </div>
                     <div class="flex items-start justify-between mb-3">
                         <div>
                             <h3 class="text-lg font-semibold text-white">Elegoo Orange Storm Giga</h3>
                             <p class="text-orange-400 text-sm font-medium mt-1">เครื่องที่ 2</p>
                         </div>
-                       
+
                     </div>
                     <div class="flex items-center justify-between pt-4 border-t border-gray-800">
                         <span class="text-gray-500 text-sm">เข้าสู่ระบบควบคุม</span>
@@ -80,9 +98,14 @@
             <a href="https://elegoo-3.ovenx.shop" target="_blank"
                 class="group block bg-gray-900 rounded-3xl overflow-hidden card-glow transition-all duration-300 hover:-translate-y-1 border border-gray-800 hover:border-purple-500/50">
                 <div class="h-52 flex items-center justify-center p-6 bg-gradient-to-b from-gray-800 to-gray-900">
-                    <img src="/image/centauri.png" alt="Elegoo Centauri" class="printer-image max-h-full object-contain">
+                    <img src="/image/centauri.png" alt="Elegoo Centauri"
+                        class="printer-image max-h-full object-contain">
                 </div>
                 <div class="p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+                        <span class="text-gray-500 text-xs font-medium">ออฟไลน์</span>
+                    </div>
                     <div class="flex items-start justify-between mb-3">
                         <div>
                             <h3 class="text-lg font-semibold text-white">Elegoo Centauri Carbon</h3>
@@ -103,6 +126,10 @@
                     <img src="/image/bambu.png" alt="Bambu Lab" class="printer-image max-h-full object-contain">
                 </div>
                 <div class="p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+                        <span class="text-gray-500 text-xs font-medium">ออฟไลน์</span>
+                    </div>
                     <div class="flex items-start justify-between mb-3">
                         <div>
                             <h3 class="text-lg font-semibold text-white">Bambu Lab H2S</h3>
@@ -123,6 +150,10 @@
                     <img src="/image/piocreate.png" alt="PioCreate" class="printer-image max-h-full object-contain">
                 </div>
                 <div class="p-6">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-2 h-2 bg-gray-500 rounded-full"></div>
+                        <span class="text-gray-500 text-xs font-medium">ออฟไลน์</span>
+                    </div>
                     <div class="flex items-start justify-between mb-3">
                         <div>
                             <h3 class="text-lg font-semibold text-white">PioCreate</h3>
