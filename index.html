@@ -7,14 +7,14 @@
     <title>3D Printer Control Panel</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+        body { font-family: 'Noto Sans Thai', 'Space Grotesk', sans-serif; }
         .card-glow:hover { box-shadow: 0 0 40px rgba(255, 255, 255, 0.1); }
         .printer-image {
-            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
             transition: transform 0.3s ease;
         }
-        .group:hover .printer-image { transform: scale(1.05); }
+        .group:hover .printer-image { transform: scale(1.08); }
     </style>
 </head>
 
@@ -37,7 +37,7 @@
             <!-- Elegoo Orange Storm Giga 1 -->
             <a href="https://elegoo-1.ovenx.shop" target="_blank"
                 class="group block bg-gray-900 rounded-3xl overflow-hidden card-glow transition-all duration-300 hover:-translate-y-1 border border-gray-800 hover:border-orange-500/50">
-                <div class="h-52 flex items-center justify-center p-6 bg-gradient-to-b from-white to-gray-100">
+                <div class="h-52 flex items-center justify-center p-6 bg-gradient-to-b from-gray-800 to-gray-900">
                     <img src="/image/giga.png" alt="Elegoo Giga" class="printer-image max-h-full object-contain">
                 </div>
                 <div class="p-6">
@@ -46,7 +46,7 @@
                             <h3 class="text-lg font-semibold text-white">Elegoo Orange Storm Giga</h3>
                             <p class="text-orange-400 text-sm font-medium mt-1">เครื่องที่ 1</p>
                         </div>
-                        <span class="bg-orange-500/10 text-orange-400 text-xs px-3 py-1 rounded-full">FDM</span>
+                       
                     </div>
                     <div class="flex items-center justify-between pt-4 border-t border-gray-800">
                         <span class="text-gray-500 text-sm">เข้าสู่ระบบควบคุม</span>
@@ -58,7 +58,7 @@
             <!-- Elegoo Orange Storm Giga 2 -->
             <a href="https://elegoo-2.ovenx.shop" target="_blank"
                 class="group block bg-gray-900 rounded-3xl overflow-hidden card-glow transition-all duration-300 hover:-translate-y-1 border border-gray-800 hover:border-orange-500/50">
-                <div class="h-52 flex items-center justify-center p-6 bg-gradient-to-b from-white to-gray-100">
+                <div class="h-52 flex items-center justify-center p-6 bg-gradient-to-b from-gray-800 to-gray-900">
                     <img src="/image/giga.png" alt="Elegoo Giga" class="printer-image max-h-full object-contain">
                 </div>
                 <div class="p-6">
@@ -67,7 +67,7 @@
                             <h3 class="text-lg font-semibold text-white">Elegoo Orange Storm Giga</h3>
                             <p class="text-orange-400 text-sm font-medium mt-1">เครื่องที่ 2</p>
                         </div>
-                        <span class="bg-orange-500/10 text-orange-400 text-xs px-3 py-1 rounded-full">FDM</span>
+                       
                     </div>
                     <div class="flex items-center justify-between pt-4 border-t border-gray-800">
                         <span class="text-gray-500 text-sm">เข้าสู่ระบบควบคุม</span>
@@ -79,7 +79,7 @@
             <!-- Elegoo Centauri Carbon -->
             <a href="https://elegoo-3.ovenx.shop" target="_blank"
                 class="group block bg-gray-900 rounded-3xl overflow-hidden card-glow transition-all duration-300 hover:-translate-y-1 border border-gray-800 hover:border-purple-500/50">
-                <div class="h-52 flex items-center justify-center p-6 bg-gradient-to-b from-white to-gray-100">
+                <div class="h-52 flex items-center justify-center p-6 bg-gradient-to-b from-gray-800 to-gray-900">
                     <img src="/image/centauri.png" alt="Elegoo Centauri" class="printer-image max-h-full object-contain">
                 </div>
                 <div class="p-6">
@@ -88,7 +88,6 @@
                             <h3 class="text-lg font-semibold text-white">Elegoo Centauri Carbon</h3>
                             <p class="text-purple-400 text-sm font-medium mt-1">Resin Printer</p>
                         </div>
-                        <span class="bg-purple-500/10 text-purple-400 text-xs px-3 py-1 rounded-full">Resin</span>
                     </div>
                     <div class="flex items-center justify-between pt-4 border-t border-gray-800">
                         <span class="text-gray-500 text-sm">เข้าสู่ระบบควบคุม</span>
@@ -100,7 +99,7 @@
             <!-- Bambu Lab -->
             <a href="https://bambu.ovenx.shop" target="_blank"
                 class="group block bg-gray-900 rounded-3xl overflow-hidden card-glow transition-all duration-300 hover:-translate-y-1 border border-gray-800 hover:border-green-500/50">
-                <div class="h-52 flex items-center justify-center p-6 bg-gradient-to-b from-white to-gray-100">
+                <div class="h-52 flex items-center justify-center p-6 bg-gradient-to-b from-gray-800 to-gray-900">
                     <img src="/image/bambu.png" alt="Bambu Lab" class="printer-image max-h-full object-contain">
                 </div>
                 <div class="p-6">
@@ -109,7 +108,6 @@
                             <h3 class="text-lg font-semibold text-white">Bambu Lab H2S</h3>
                             <p class="text-green-400 text-sm font-medium mt-1">เครื่องที่ 1</p>
                         </div>
-                        <span class="bg-green-500/10 text-green-400 text-xs px-3 py-1 rounded-full">FDM</span>
                     </div>
                     <div class="flex items-center justify-between pt-4 border-t border-gray-800">
                         <span class="text-gray-500 text-sm">เข้าสู่ระบบควบคุม</span>
@@ -121,7 +119,7 @@
             <!-- PioCreate -->
             <a href="https://piocreate.ovenx.shop" target="_blank"
                 class="group block bg-gray-900 rounded-3xl overflow-hidden card-glow transition-all duration-300 hover:-translate-y-1 border border-gray-800 hover:border-blue-500/50">
-                <div class="h-52 flex items-center justify-center p-6 bg-gradient-to-b from-white to-gray-100">
+                <div class="h-52 flex items-center justify-center p-6 bg-gradient-to-b from-gray-800 to-gray-900">
                     <img src="/image/piocreate.png" alt="PioCreate" class="printer-image max-h-full object-contain">
                 </div>
                 <div class="p-6">
